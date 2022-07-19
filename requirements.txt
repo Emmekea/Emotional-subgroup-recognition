@@ -1,0 +1,17 @@
+tensorflow==2.7
+pandas
+sklearn
+keras
+scipy
+json
+cv2
+csv
+face_recognition
+keras_vggface
+opencv-python
+keras_applications
+torchvision
+PIL
+torch
+
+pip freeze
