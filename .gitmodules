@@ -1,0 +1,3 @@
+[submodule "deep-head-pose-lite"]
+	path = deep-head-pose-lite
+	url = https://github.com/OverEuro/deep-head-pose-lite

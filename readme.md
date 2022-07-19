@@ -1,11 +1,16 @@
 # Emotional Subgroup Recognition
 
-For the automatic recognition of emotional subgroups in images. Given an image with multiple people present, it starts with predicting individual emotions and proceeds to cluster them into emotional subgroups. We additionally provide annotations of individual emotions, of social groups, and of emotional subgroups for 171 images collected from several datasets.
+For the automatic recognition of emotional subgroups in images. Given an image with multiple people present, it starts with predicting individual emotions and proceeds to cluster them into emotional subgroups. We additionally provide annotations of individual emotions, of social groups, and of emotional subgroups for 171 images collected from several datasets. 
+
+Run the following command to download this repository along with its dependencies:
+```
+git clone --recursive git@github.com:Emmekea/emotional-subgroup-recognition.git
+``` 
 
 For details about the methodology and results, we refer to our IJCAI'22 paper (link will follow after proceedings are published). If you find our code useful for your research, please cite:
 
 ```
-@InProceedings{Ruiz_2018_CVPR_Workshops,
+@InProceedings{veltmeijer2022automatic,
 author = {Veltmeijer, Emmeke A. and Gerritsen, Charlotte and Hindriks, Koen V.},
 title = {Automatic Recognition of Emotional Subgroups in Images},
 booktitle = {ijcai},
@@ -17,8 +22,11 @@ year = {2022}
 ## Requirements
 
 - `requirements.txt` contains all required packages and their versions on which this code was tested.
-- For gaze estimation, we make use of the [light version](https://github.com/OverEuro/deep-head-pose-lite) of [Hopenet](https://github.com/natanielruiz/deep-head-pose/tree/f7bbb9981c2953c2eca67748d6492a64c8243946) (Ruiz et al., 2018).  `stable_hopenetlite.py` should be placed in the root directory, `shuff_epoch_120.pkl` in `model/`.
-- If you wish to work with the same data as in the paper, `data.json` contains all original image names together with the dataset they were retrieved from. To request access to these datasets, please go [here](https://iitrpr.ac.in/lasii/resources.html) for HAPPEI (Dhall et al., 2012) and GAF 3.0 (Dhall et al., 2018), and [here](http://sunai.uoc.edu/emotic/download.html) for EMOTIC (Kosti et al., 2019). Once the images from `data.json` are collected, place them in `img/`, then run `image_renaming.py` to rename the images according to the index assigned to them in `data.json`.
+- For gaze estimation, we make use of the [light version](https://github.com/OverEuro/deep-head-pose-lite) of [Hopenet](https://github.com/natanielruiz/deep-head-pose/tree/f7bbb9981c2953c2eca67748d6492a64c8243946) (Ruiz *et al*., 2018). If you haven't cloned our repository using `--recursive`, please run the following command to ensure this dependency is downloaded: `git submodule update --init --recursive`.
+
+## Data
+
+If you wish to work with the same data as in the paper, the original datasets they were retrieved from should be downloaded. To request access to these datasets, please go [here](https://iitrpr.ac.in/lasii/resources.html) for HAPPEI (Dhall *et al*., 2012) and GAF 3.0 (Dhall *et al*., 2018), and [here](http://sunai.uoc.edu/emotic/download.html) for EMOTIC (Kosti *et al.*, 2019). Once these datasets are acquired, place them in `datasets/` and run `collect.py`. This finds all images from `data.json`, renames them according to the index assigned to them in our study, and places them in `img/`. The ground truth annotations can be found in `data.json`.
 
 ## Usage
 
@@ -26,35 +34,10 @@ year = {2022}
 
 ## References
 
-@inproceedings{dhall2012finding,
-  title={Finding happiest moments in a social context},
-  author={Dhall, Abhinav and Joshi, Jyoti and Radwan, Ibrahim and Goecke, Roland},
-  booktitle={Asian Conference on Computer Vision},
-  pages={613--626},
-  year={2012},
-  organization={Springer}
-}
-@inproceedings{dhall2018emotiw,
-  title={Emotiw 2018: Audio-video, student engagement and group-level affect prediction},
-  author={Dhall, Abhinav and Kaur, Amanjot and Goecke, Roland and Gedeon, Tom},
-  booktitle={Proceedings of the 20th ACM International Conference on Multimodal Interaction},
-  pages={653--656},
-  year={2018}
-}
-@article{kosti2019context,
-  title={Context based emotion recognition using emotic dataset},
-  author={Kosti, Ronak and Alvarez, Jose M and Recasens, Adria and Lapedriza, Agata},
-  journal={IEEE transactions on pattern analysis and machine intelligence},
-  volume={42},
-  number={11},
-  pages={2755--2766},
-  year={2019},
-  publisher={IEEE}
-}
-@InProceedings{Ruiz_2018_CVPR_Workshops,
-author = {Ruiz, Nataniel and Chong, Eunji and Rehg, James M.},
-title = {Fine-Grained Head Pose Estimation Without Keypoints},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-month = {June},
-year = {2018}
-}
+Dhall, A., Joshi, J., Radwan, I., & Goecke, R. (2012, November). Finding happiest moments in a social context. In *Asian Conference on Computer Vision* (pp. 613-626). Springer, Berlin, Heidelberg.
+
+Dhall, A., Kaur, A., Goecke, R., & Gedeon, T. (2018, October). Emotiw 2018: Audio-video, student engagement and group-level affect prediction. In *Proceedings of the 20th ACM International Conference on Multimodal Interaction* (pp. 653-656).
+
+Kosti, R., Alvarez, J. M., Recasens, A., & Lapedriza, A. (2019). Context based emotion recognition using emotic dataset. *IEEE transactions on pattern analysis and machine intelligence*, 42(11), 2755-2766.
+
+Ruiz, N., Chong, E., & Rehg, J. M. (2018). Fine-grained head pose estimation without keypoints. In *Proceedings of the IEEE conference on computer vision and pattern recognition workshops* (pp. 2074-2083).
