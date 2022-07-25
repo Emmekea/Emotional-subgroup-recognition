@@ -7,7 +7,7 @@ Run the following command to download this repository along with its dependencie
 git clone --recursive git@github.com:Emmekea/emotional-subgroup-recognition.git
 ``` 
 
-For details about the methodology and results, we refer to our IJCAI'22 paper (link will follow after proceedings are published). If you find our code useful for your research, please cite:
+For details about the methodology and results, we refer to our [IJCAI'22 paper](https://www.ijcai.org/proceedings/2022/0190.pdf). If you find our code useful for your research, please cite:
 
 ```
 @InProceedings{veltmeijer2022automatic,
