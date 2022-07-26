@@ -10,12 +10,19 @@ git clone --recursive git@github.com:Emmekea/emotional-subgroup-recognition.git
 For details about the methodology and results, we refer to our [IJCAI'22 paper](https://www.ijcai.org/proceedings/2022/0190.pdf). If you find our code useful for your research, please cite:
 
 ```
-@InProceedings{veltmeijer2022automatic,
-author = {Veltmeijer, Emmeke A. and Gerritsen, Charlotte and Hindriks, Koen V.},
-title = {Automatic Recognition of Emotional Subgroups in Images},
-booktitle = {ijcai},
-month = {July},
-year = {2022}
+@inproceedings{ijcai2022-190,
+  title     = {Automatic Recognition of Emotional Subgroups in Images},
+  author    = {Veltmeijer, Emmeke A. and Gerritsen, Charlotte and Hindriks, Koen V.},
+  booktitle = {Proceedings of the Thirty-First International Joint Conference on
+               Artificial Intelligence, {IJCAI-22}},
+  publisher = {International Joint Conferences on Artificial Intelligence Organization},
+  editor    = {Luc De Raedt},
+  pages     = {1363--1370},
+  year      = {2022},
+  month     = {7},
+  note      = {Main Track}
+  doi       = {10.24963/ijcai.2022/190},
+  url       = {https://doi.org/10.24963/ijcai.2022/190},
 }
 ```
 
